@@ -7,14 +7,67 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo"></a>
+            <a href="#" class="logo">The Bookshop</a>
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#"> Contact Us</a></li>
-            </ul>
+            </ul> 
         </header>
-        
+        <section class="banner"></section>
+        <script type="text/javascript">
+            window.addEventListener("scroll", function(){
+                var header = document.querySelector("header");
+                header.classList.toggle("sticky", window.scrollY > 0)
+            })
+        </script>
+
+        <main>
+            <div>
+                <div>
+                    <img src="" alt="" width="200">
+                    <div class="a">
+                        <p>Description</p>
+                        <p>can multiple paragraph</p>
+                        <button>Pay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="" alt="" width="200">
+                    <div class="a">
+                        <p>Description</p>
+                        <p>can multiple paragraph</p>
+                        <button>Pay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <img src="" alt="" width="200">
+                    <div class="a">
+                        <p>Description</p>
+                        <p>can multiple paragraph</p>
+                        <button>Pay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="a">
+                    <img src="" alt="" width="200">
+                    <div>
+                        <p>Description</p>
+                        <p>can multiple paragraph</p>
+                        <button>Pay</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+            
 
     </body>
 </html>
