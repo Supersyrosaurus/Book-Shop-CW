@@ -113,12 +113,17 @@ header.sticky ul li a
     text-align: center;
     color: #fff;
     margin-top: 100px;
-    padding: 200px 200px;
+    padding: 250px 250px;
     width: 100%;
     height: 100%;
-    background-image: url("../library-1.jpg");
-    filter: brightness(50%);
+    background-image: 
+    linear-gradient(
+          rgba(100, 100, 100, 0.7), 
+          rgba(100, 100, 100, 0.7)
+        ),
+    url("../library-1.jpg");
 }
+
 
 
 @media (max-width: 650px) {
