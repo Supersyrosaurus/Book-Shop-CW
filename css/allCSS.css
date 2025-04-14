@@ -21,7 +21,7 @@ p {
 }
 body
 {
-    background: #fff;
+    background: #66A8B0;
     min-height: 200vh;
 }
 header
@@ -94,19 +94,26 @@ header.sticky ul li a
     display: flex;
     padding: 10px;
     margin: 10px;
-    border-style: solid;
-    border-color: #000;
+    /* border-style: solid;
+    border-color: #000; */
     border-width: 1px;
+    background-color: #86BBC1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button :hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .mainContainer {
     display: flex;
     flex-wrap: wrap;
-    border-style: solid;
-    border-color: #000;
+    /* border-style: solid;
+    border-color: #000; */
     border-width: 1px;
     margin-bottom: 10px;
     margin-top: 0px;
+    background-color: #66A8B0;
 }
 
 .mainHeading {
