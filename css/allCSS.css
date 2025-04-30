@@ -179,7 +179,43 @@ button :hover {
     background-position: center;
 }
 
+/* PAYING PAGE */
 
+label {
+    margin: 0% 0%;
+    padding: 0% 0%;
+    border: 1px solid #000;
+}
+
+.payContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% 20%;
+    padding: 5% 5%;
+    border: 1px solid #000;
+    background-color: grey;
+    
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+    width: max-content;
+    margin: 0% 0%;
+    padding: 5% 5%;
+    border: 1px solid #000;
+    
+}
+
+#send {
+    padding: 5% 40% 5% 40%;
+    margin: 0% 0% 0% 0%;
+    border: 1px solid #000;
+    border-radius: 0%;
+}
 
 @media (max-width: 650px) {
 
