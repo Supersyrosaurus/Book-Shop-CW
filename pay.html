@@ -7,58 +7,79 @@
     <link rel="stylesheet" href="/css/allCSS.css">
 </head>
 <body>
-    <div class="payContainer">
-        <h1>
-            Debit / Credit Card
-        </h1>
-        <form>
-            <div class="inputContainer">
-                <label for="CC">Card Number</label>
-                <input type="text" maxlength="16" size="16" id="cc" placeholder="CC">
-            </div>
-            
-            <div class="inputContainer">
-                <label for="EXP">Expiration Date</label>
-                <select name="month" id="month">
-                    <option value="-1">Month</option>
-                    
-                    <option value="01">01</option>
-                    <option value="02">02</option>
-                    <option value="03">03</option>
-                    <option value="04">04</option>
-                    <option value="05">05</option>
-                    <option value="06">06</option>
-                    <option value="07">07</option>
-                    <option value="08">08</option>
-                    <option value="09">09</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
+    <header>
 
-                </select>
-                <select name="year" id="year">
-                    <option value="-1">Year</option>
+        <a href="#" class="logo"><img class="logoImg" src="Library OF OHARA.png" alt=""></a>
+        
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#"> Contact Us</a></li>
+        </ul> 
 
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
+        <ul class="navigation">
+            <li class="hideOnMobile"><a href="#">Home</a></li>
+            <li class="hideOnMobile"><a href="#">About Us</a></li>
+            <li class="hideOnMobile"><a href="#"> Contact Us</a></li>
+            <li class="menuButton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+
+    </header>
+    <section class="banner">
+        <div class="payContainer">
+            <h1>
+                Debit / Credit Card
+            </h1>
+            <form>
+                <div class="inputContainer">
+                    <label for="CC">Card Number</label>
+                    <input type="text" maxlength="16" size="16" id="cc" placeholder="CC">
+                </div>
                 
-                </select>
-            </div>
+                <div class="inputContainer">
+                    <label for="EXP">Expiration Date</label>
+                    <select name="month" id="month">
+                        <option value="-1">Month</option>
+                        
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
 
-            <div class="inputContainer">
-                <label for="">Security Code</label>
-                <input type="text" maxlength="4" size="4" id="cv" placeholder="CV">
-            </div>
-            
-            <input type="submit" id="send" value="Continue">
+                    </select>
+                    <select name="year" id="year">
+                        <option value="-1">Year</option>
 
-        </form>
-    </div>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                    
+                    </select>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="">Security Code</label>
+                    <input type="text" maxlength="4" size="4" id="cv" placeholder="CV">
+                </div>
+                
+                <input type="submit" id="send" value="Continue">
+
+            </form>
+        </div>
+    </section>
     <script src="/js/index.js"></script>
 </body>
 </html>
