@@ -7,67 +7,87 @@
     </head>
     <body>
         <header>
-            <a href="#" class="logo">The Bookshop</a>
-            <ul>
+
+            <a href="#" class="logo"><img class="logoImg" src="Library OF OHARA.png" alt=""></a>
+            
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#"> Contact Us</a></li>
             </ul> 
+
+            <ul class="navigation">
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="#">About Us</a></li>
+                <li class="hideOnMobile"><a href="#"> Contact Us</a></li>
+                <li class="menuButton" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 -960 960 960" width="36px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            </ul>
+
         </header>
-        <section class="banner"></section>
-        <script type="text/javascript">
-            window.addEventListener("scroll", function(){
-                var header = document.querySelector("header");
-                header.classList.toggle("sticky", window.scrollY > 0)
-            })
-        </script>
-
-        <main>
-            <div>
-                <div>
-                    <img src="" alt="" width="200">
-                    <div class="a">
-                        <p>Description</p>
-                        <p>can multiple paragraph</p>
-                        <button>Pay</button>
-                    </div>
+        <section class="banner">
+            <main>
+                <div class="mainHeading">
+                    Welcome to the Library Of OHARA
                 </div>
-            </div>
-
-            <div>
-                <div>
-                    <img src="" alt="" width="200">
-                    <div class="a">
-                        <p>Description</p>
-                        <p>can multiple paragraph</p>
-                        <button>Pay</button>
+                <div class = "mainContainer">
+                    
+                    <div class="bookBox">
+                        <div>
+                            <img class="bookImg" src="Running Wild.jpg" alt="" width="200">
+                            <div class="bookContText">
+                                <h2 class="bookTitle">Running Wild</h2>
+                                <p class="bookAuthor">Michael Mopurgo</p>
+                                <p class="bookDesc">When the sea takes everything, the jungle gives him a chance to survive. Swept away by a tsunami and carried into the rainforest on the back of an elephant, Will must learn to trust the wild — and himself — to find his way home.</p>
+                                <button>Pay</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                    <img src="" alt="" width="200">
-                    <div class="a">
-                        <p>Description</p>
-                        <p>can multiple paragraph</p>
-                        <button>Pay</button>
+    
+                    <div class="bookBox">
+                        <div>
+                            <img class="bookImg" src="Scythe.jpg" alt="" width="200">
+                            <div class="bookContText">
+                                <h2 class="bookTitle">Scythe</h2>
+                                <p class="bookAuthor">Neal Shusterman</p>
+                                <p class="bookDesc">In a world without death, someone has to take life. Chosen to apprentice as Scythes — society’s only sanctioned killers — Citra and Rowan must learn the art of death... or be claimed by it themselves.</p>
+                                <button>Pay</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="a">
-                    <img src="" alt="" width="200">
-                    <div>
-                        <p>Description</p>
-                        <p>can multiple paragraph</p>
-                        <button>Pay</button>
+                    
+                    <div class="bookBox">
+                        <div>
+                            <img class="bookImg" src="Alex Rider.jpg" alt="" width="200">
+                            <div class="bookContText">
+                                <h2 class="bookTitle">Alex Rider</h2>
+                                <p class="bookAuthor">Anthony Horowitz</p>
+                                <p class="bookDesc">When MI6 recognises his potential, fourteen-year-old Alex Rider is forcibly recruited, armed with secret gadgets and sent on his first mission. But will he survive? He’s soon in mortal danger, and there’s no turning back.</p>
+                                <button>Pay</button>
+                            </div>
+                        </div>
                     </div>
+    
+                    <div class="bookBox">
+                        <div>
+                            <img class="bookImg" src="A Tale Of Two Cities.jpg" alt="" width="200">
+                            <div class="bookContText">
+                                <h2 class="bookTitle">A Tale Of Two Cities</h2>
+                                <p class="bookAuthor">Charles Dickens</p>
+                                <p class="bookDesc">Two cities. One revolution. A story of love, sacrifice, and redemption. In a world on the brink of chaos, a quiet hero must risk everything to save the woman he loves — even if it costs him his life.</p>
+                                <button>Pay</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </main>
-            
+    
+    
+            </main>
+        </section>
+        
+        <script src="/js/index.js" defer></script>
+
 
     </body>
 </html>
