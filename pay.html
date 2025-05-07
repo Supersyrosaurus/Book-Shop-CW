@@ -35,7 +35,7 @@
                 <div class="inputContainer">
                     <label for="CC">Card Number</label>
                     <input type="text" maxlength="16" size="16" id="cc" placeholder="CC">
-                    <p class="ccErr">Incorrect Card Number Entered</p>
+                    <p id="ccErr"></p>
                 </div>
                 
                 <div class="inputContainer">
@@ -76,13 +76,13 @@
                         <option value="2032">2032</option>
 
                     </select>
-                    <p class="cardExp">Your Card Has Expired</p>
+                    <p id="cardExp"></p>
                 </div>
 
                 <div class="inputContainer">
                     <label for="">Security Code</label>
                     <input type="text" maxlength="4" size="4" id="cvv" placeholder="CVV">
-                    <p class="cvvErr">Incorrect Security Code Entered</p>
+                    <p id="cvvErr"></p>
                 </div>
                 
                 <input type="submit" id="send" value="Continue">

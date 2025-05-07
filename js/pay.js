@@ -36,18 +36,33 @@ window.onload = () => {
         // Card Inofrmation Validation
 
         if (cc.match(ccPatt) == null) {
-            alert('incorrect cc')
+            // alert('incorrect cc')
+            document.getElementById('ccErr').textContent = 'Incorrect Card Number Entered'
             return
+        }
+
+        else {
+            document.getElementById('ccErr').textContent = ''
         }
 
         if ((todayY > year) || ((todayM > month) && (todayY == year))){
-            alert('incorrect date')
+            // alert('incorrect date')
+            document.getElementById('cardExp').textContent = 'Card is Expired'
             return
         }
 
+        else {
+            document.getElementById('cardExp').textContent = ''
+        }
+
         if (cvv.match(cvvPatt) == null){
-            alert('incorrect cvv')
+            // alert('incorrect cvv')
+            document.getElementById('cvvErr').textContent = 'Incorrect Security Number Entered'
             return
+        }
+
+        else {
+            document.getElementById('cvvErr').textContent = ''
         }
 
         const url = 'https://mudfoot.doc.stu.mmu.ac.uk/node/api/creditcard'

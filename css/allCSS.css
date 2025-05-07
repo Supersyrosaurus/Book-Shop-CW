@@ -8,7 +8,7 @@
 body
 {
     background: #66A8B0;
-    min-height: 200vh;
+    min-height: 100%;
 }
 
 
@@ -251,7 +251,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 25vh 20vw;
+    margin: 30vh 20vw;
     padding: 5% 5%;
     /* border: 1px solid #000; */
     background-color: #bbccce;
@@ -294,14 +294,14 @@ label {
 }
 
 #ccErr, #cardExp, #cvvErr {
-    display: none;
-}
-
-.ccErr, .cardExp, .cvvErr {
-    display: none;
+    display: block;
     color: rgb(241, 78, 78);
     font-weight: bold;
     transition: 0.6s;
+}
+
+#last4 {
+    color: rgb(0, 0, 0);
 }
 
 
