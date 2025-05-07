@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 body
 {
@@ -291,6 +292,19 @@ label {
     transition: 0.6s;
 
 }
+
+#ccErr, #cardExp, #cvvErr {
+    display: none;
+}
+
+.ccErr, .cardExp, .cvvErr {
+    display: none;
+    color: rgb(241, 78, 78);
+    font-weight: bold;
+    transition: 0.6s;
+}
+
+
 
 @media (max-width: 800px) {
 

@@ -1,9 +1,4 @@
 
-window.addEventListener("scroll", function(){
-    var header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 0)
-})
-
 function showSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
@@ -14,66 +9,100 @@ function hideSidebar() {
     sidebar.style.display = 'none'
 }
 
-document.getElementById("send").addEventListener("click", e)
 
-function f() {
-    // alert('this is woking')
-    console.error('this is working')
-}
+window.onload = () => {
 
-function e() {
-    
-    alert('working')
-    // e.preventdefault()
-    //get input 5%
-    alert('working2')
-    const CC = document.getElementById("cc").value
-    const month = document.getElementById("month").value
-    const year = document.getElementById("year").value
-    const CVV = document.getElementById('cvv').value
-    //validate user input 10%
-    const CCpatt = /^5[1-5][0-9]{14}$/
-    //psuedo: if CC !match pattern
-    const CVVpatt = /^[0-9]{3,4}$/
-    
-    if (CC.match(CCpatt) == null)
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    })
+
+    document.getElementById('send').addEventListener('click', (e) =>
     {
-        alert("errorMsg(Your Credit Card Number is Wrong)")
-        // location.reload()
+        e.preventDefault();
 
-    }
+        const cc = document.getElementById('cc').value
+        const month = parseInt( document.getElementById('month').value)
+        const year = parseInt(document.getElementById('year').value)
+        const cvv = document.getElementById('cvv').value
 
-    //do same with CVV, exp date
-    if (CVV.match(CVVpatt) == null) 
-    {
-        alert("errorMsg(Your Security Code Number is Wrong)")
-    }
+        const ccPatt = /^5[1-5][0-9]{14}$/
+        const cvvPatt = /^[0-9]{3,4}$/
 
-    // create a today date (today = ...)
-    today = new Date()
-    todayM = today.getMonth() + 1
-    todayY = today.getFullYear()
-    // alert(String(todayM))
-    // alert(String(todayY))
-    //if today month is greater and today year is greater than exp date then card expired
-    if ((todayY > year) || ((todayM > month) && (todayY == year)))
-    {
-        alert("errorMsg(Your Credit Card is Expired)")
-    }
+        today = new Date()
+        todayM = today.getMonth() + 1
+        todayY = today.getFullYear()
 
+        // Card Inofrmation Validation
+
+        if (cc.match(ccPatt) == null) {
+            alert('incorrect cc')
+            return
+        }
+
+        if ((todayY > year) || ((todayM > month) && (todayY == year))){
+            alert('incorrect date')
+            return
+        }
+
+        if (cvv.match(cvvPatt) == null){
+            alert('incorrect cvv')
+            return
+        }
+
+        const url = 'https://mudfoot.doc.stu.mmu.ac.uk/node/api/creditcard'
+        const data = {
+            "master_card": cc,
+            "exp_year": year,
+            "exp_month": month,
+            "cvv_code": cvv
+
+
+        };
+
+        //Posting data
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
     
-    //send to API 15%
-    //lec 9 pp
-    //fetch
-    //check .then response.status === 200  (successful) return response.json())
-    //.then alert()
-    //save last 4 no. of CC no. in local storage (w3schools storage api)
-    //const last 4 = CC % 10000
-    //localStorage.setItem("qqq")
-    //
-    //location.href = "success.html"
-    // .catch etc
+        .then((response) => {
+            if (response.status === 201 || response.status === 200) {
+                return response.json();
+            }
+            else if (response.status === 400) {
+                throw 'Bad data was sent to the server';
+            }
+            else {
+                throw 'Unexpected error:' + String(response.status);
 
-    //2 js files - 1 for processing 1 for success (show last 4 digits of CC no.)
+            }
+        })
+    
+    
+        .then((resJson) => {
+            alert(resJson["message"])
+            const cc4 = cc.slice(-4)
+            localStorage.setItem('last4', cc4)
 
-}
+
+            location.href = 'success.html'
+        })
+    
+        .catch((error) => {
+            alert(error);
+        })
+
+        
+    })
+
+};
+
+
+
+
+
