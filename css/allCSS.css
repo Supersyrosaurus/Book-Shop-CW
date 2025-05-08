@@ -119,25 +119,11 @@ header.sticky .logoImg {
 .sidebar a {
     width: 100%;
 }
-
-@font-face {
-    font-family: '';
-    src: url();
-}
-
-/* img {
-    float: left;
-    max-width: 100%;
-    max-height: 100%;
-} */
-
-
+ /* MAIN BOOK PAGE  */
 .bookContText {
     float: right;
     width: 60%; 
-    /* border: 1px solid #000; */
     padding-left: 2vw;
-    /* word-break: break-all; */
 }
 
 p {
@@ -147,7 +133,6 @@ p {
 }
 
 .bookBox {
-    /* position: relative; */
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -155,7 +140,6 @@ p {
     height: auto;
     padding: 2vh 2vw;
     margin: 2vh 2vw;
-    /* border: 1px solid #0f0; */
     background-color: #86BBC1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.6s;
@@ -177,7 +161,6 @@ p {
 }
 
 .bookImg {
-    /* border: 1px solid #f00; */
     width: 30%;
     height: auto;
     object-fit: cover
@@ -185,7 +168,6 @@ p {
 }
 
 button {
-    /* font-size: ; */
     background-color: #66A8B0;
     padding: 1vh 1vw;
     margin: 3vh 0vw;
@@ -208,7 +190,6 @@ button:hover {
 .mainContainer {
     display: flex;
     flex-wrap: wrap;
-    /* border: 1px solid #000; */
     margin-bottom: 10px;
     margin-top: 0px;
     padding: 1vh;
@@ -227,7 +208,7 @@ button:hover {
           rgba(100, 100, 100, 0.7), 
           rgba(100, 100, 100, 0.7)
         ),
-    url("../library-1.jpg");
+    url("../Images/library-1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -244,7 +225,6 @@ button:hover {
 label {
     margin: 0% 0%;
     padding: 0% 0%;
-    /* border: 1px solid #000; */
 }
 
 .payContainer {
@@ -253,7 +233,6 @@ label {
     align-items: center;
     margin: 30vh 20vw;
     padding: 5% 5%;
-    /* border: 1px solid #000; */
     background-color: #bbccce;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     color: rgb(59, 59, 59);
@@ -271,15 +250,12 @@ label {
     gap: 5%;
     margin: 0% 0%;
     padding: 5% 5%;
-    /* border: 1px solid #000; */
-    /* font-size: 100%; */
 }
 
 
 #send {
     padding: 5% 40% 5% 40%;
     margin: 0% 0% 0% 0%;
-    /* border: 1px solid #000; */
     border-radius: 10px;
     transition: 0.6s;
     border: none;
