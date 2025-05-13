@@ -96,7 +96,7 @@ window.onload = () => {
             body: JSON.stringify(data)
         })
     
-        
+        //Checks if response from the server is successful, otherwise gives description of error
         .then((response) => {
             if (response.status === 201 || response.status === 200) {
                 return response.json();
@@ -110,7 +110,8 @@ window.onload = () => {
             }
         })
     
-    
+        //Parses response from the server and displays to user before saving last 4 digits of card
+        //and transferring user to the success page
         .then((resJson) => {
             alert(resJson["message"])
             const cc4 = cc.slice(-4)
@@ -120,6 +121,7 @@ window.onload = () => {
             location.href = 'success.html'
         })
     
+        //Any errors which happen will be alerted on screen
         .catch((error) => {
             alert(error);
         })

@@ -1,13 +1,17 @@
+
+//Checks if user scrolls on page to enable sticky header
 window.addEventListener("scroll", function(){
     var header = document.querySelector("header");
     header.classList.toggle("sticky", window.scrollY > 0)
 })
 
+//Enables sidebar functionality
 function showSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'flex'
 }
 
+//Disables sidebar functionality
 function hideSidebar() {
     const sidebar = document.querySelector('.sidebar')
     sidebar.style.display = 'none'
@@ -17,5 +21,5 @@ window.onload = () => {
     //get last-4 digits and show it
     //using webapi - w3schools api storage can use local storage no need database
     const last4 = localStorage.getItem("last4")
-    document.getElementById("last4").innerHTML = "Your card ending in " + last4 + " has been saved"
+    document.getElementById("last4").innerHTML = "Your card ending in **** **** **** " + last4 + " has been saved"
 }

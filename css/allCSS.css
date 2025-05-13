@@ -120,7 +120,7 @@ header.sticky .logoImg {
     width: 100%;
 }
  /* MAIN BOOK PAGE  */
-.bookContText {
+.bookDescBox{
     float: right;
     width: 60%; 
     padding-left: 2vw;
